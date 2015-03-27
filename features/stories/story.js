@@ -7,8 +7,8 @@ var mongoose = require('mongoose'),
 
 var StorySchema = new Schema({
     assignee: Definitions.string(100, true),
-    criteria: Definitions.string(100, true),
-    description: Definitions.string(100, true),
+    criteria: Definitions.string(100, false),
+    description: Definitions.string(100, false),
     reporter: Definitions.string(100, true),
     status: Definitions.string(100, true),
     title: Definitions.string(100, true),
