@@ -30,7 +30,7 @@ app.use('/api/clients/:userId/stories', require('./features/stories'));
 app.use('/api/clients/:userId/users', require('./features/users'));
 
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 4000;
 
 http.createServer(app).listen(port, function (err) {
   console.log('listening in http://localhost:' + port);
