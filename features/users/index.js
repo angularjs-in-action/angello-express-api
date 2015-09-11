@@ -27,7 +27,7 @@ app.get('/:id', function(req, res) {
 });
 
 app.put('/:id', function(req, res) {
-  User.update({_id: req.params.id, userId: req.user.sub}, _.omit(req.body, 'userId'), function(err, user){
+  User.update({_id: req.params.id, userId: req.user.sub}, _.omit(req.body, '_id'), function(err, user){
       if (err) {
         res.status(400).send(err);
       } else {

@@ -27,7 +27,7 @@ app.get('/:id', function(req, res) {
 });
 
 app.put('/:id', function(req, res) {
-  Story.update({_id: req.params.id, userId: req.user.sub}, _.omit(req.body, 'userId'), function(err, story){
+  Story.update({_id: req.params.id, userId: req.user.sub}, _.omit(req.body, '_id'), function(err, story){
       if (err) {
         res.status(400).send(err);
       } else {
