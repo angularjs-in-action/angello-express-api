@@ -8,7 +8,7 @@ module.exports = {
       required: !!required,
       validate: validate({
         validator: "isLength",
-        arguments: [null, len || 100]
+        arguments: [0, len || 100]
       })
     };
   },
